@@ -39,7 +39,7 @@ Once an anchor is created a notification will appear to show the currently ancho
 After anchor is created and a different linkable component is selected, a link can be created to the anchor using the purple link action button. The anchor notification will go away, and a quick confirmation notification will be shown to confirm successful linking.
 
 ## Components
-Each component has a specific logical functions, many of these functions are inspired by software development.
+Each component has a specific logical function to perform, many of these functions are inspired by software development and adapted specifically for use in knowledge automation, business process automation and automated conversations.
 
 ### Values
 Each component has a value at any given time. How the value for each component is calculated is different.
@@ -66,7 +66,7 @@ Container component can contain other components and thus can be deeply nested t
 Elements are components that cannot contain other components. In general elements represent data elements than can be assigned a literal value, such as ```1``` or ```hello```, or an object such as ```{color: 'GREEN', width: 16}```.
 
 #### Expressions
-Expression components contain [JavaScript expressions](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Expressions_and_Operators), enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
+Expression components contain [JavaScript expressions](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Expressions_and_Operators) that enable simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
 
 Expressions have special functions depending on which components they are added to, however all expressions can be linked to regardless of their special functions.
 
@@ -162,5 +162,14 @@ return {
 };
 ```
 
+## Sessions
+Once a construct is published by its handler, users can start creating sessions with that construct. Constructs can be published privately, publicly and within organisations.
+
+To start a session with a construct the user must locate the construct on their stage, where it will appear if the construct was published to this user or their organisation or to the public. If the handler charges a fee for using the construct, the user will require a sufficient amount of credits to start the session.
+
+In order to ensure that users always are using fresh knowledge, sessions expire automatically after a period of time determined by the handler. the expiration period is determined by the handler based on the nature of the knowledge, for example, day trading advice will expire before agricultural planning advice because day trading markets change fast and agricultural seasons changes slowly.
+
+Once a session was started, the construct viewer will be shown for the construct in question. While a session has not expired, it can be found using the Sessions menu. Once expired, only reports of a session will be available, until archived or deleted by the user.
+
 ## Construct Viewer
-The construct viewer looks a lot like a software wizard, and was inspired by that design. It has 3 main areas, the page view of the left, the timeline on the right, and the navigation buttons at the bottom of the page.
+The construct viewer looks a lot like a software installation wizard, and was inspired by that design. It has 3 main areas, the current page of the session on the left, the timeline on the right, and the navigation at the bottom of the page.
