@@ -1,7 +1,7 @@
 # ExpertBox
-ExpertBox.com is a knowledge automation platform that is used by experts from different domains to create constructs of systematic conversations that converse with consumer, for free or for a small fee.
+(ExpertBox.com)[https://ExpertBox.com] is a free to use knowledge automation platform used by experts from different knowledge domains to create constructs of systematic conversations that converse unattended with consumers, for free or for a small fee.
 
-Constructs are automated conversations and business process automation flows, created on ExpertBox.com using the construct designer.
+Constructs are automated conversations and business process automation flows, created on (ExpertBox.com)[https://ExpertBox.com] using the construct designer. Users can have paid or free or subscribe to sessions with constructs and access these session via the Construct Viewer.
 
 ## Construct Designer
 The construct designer includes an action button that, when touched or hovered over presents an icon menu (with tooltips) relevant to the current component that is selected in the model. The model is a serie component, the top level component of the construct, and the entry point to all other components in the construct.
@@ -66,7 +66,7 @@ Container component can contain other components and thus can be deeply nested t
 Elements are components that cannot contain other components. In general elements represent data elements than can be assigned a literal value, such as ```1``` or ```hello```, or an object such as ```{color: 'GREEN', width: 16}```.
 
 #### Expressions
-Expressions are JavaScript expressions, enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
+Expression components contain (JavaScript expressions)[https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Expressions_and_Operators], enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
 
 Expressions have special functions depending on which components they are added to, however all expressions can be linked to regardless of their special functions.
 
@@ -79,6 +79,51 @@ In order to make constructs more managable and easier to understand in the Const
 | Serie      | n/a                                                         |
 | Leaf       | first leaf of a branch with true expression is branch value |
 | Loop       | stop loop iteration if expression is true                   |
+
+Expressions have direct access to the value of linked values as same named local variables in script, and have access to a set of utility libraries to simplify and speed up the writing of scrips.
+
+Example - always returns true:
+```
+  return true;
+```
+
+Example - always returns false:
+```
+  return false;
+```
+
+Example - return the value of a linked component named ```colour```
+```
+  return colour;
+```
+
+Example - return ture if a linked component named ```colour``` has the value ```GREEN```
+```
+  return colour === 'GREEN';
+```
+
+Advanced example - use the underscore library to group a linked list of colours by type
+```
+  var isPrimary = function(colour) {
+    switch(colour) {
+      case: 'RED';
+      case: 'YELLOW';
+      case: 'BLUE';
+        return true;
+      default: ;
+        return false;
+    }
+  };
+  var colourType = function(colour) {
+    if(isPrimary(colour)) {
+      return 'PRIMARY';
+    }
+    else {
+      return 'SECONDARY';
+    }
+  };
+  return api._.groupBy(colourList, function(colour){ return  colourType(colour)});
+```
 
 #### Controls
 Controls are GUI (Graphical User Interface) components used to present or collect information from the construct user in the viewer. Controls can only be added to pages and all controls on  a page is shown to the user in the construct viewer at the same time.
