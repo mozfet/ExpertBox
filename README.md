@@ -65,6 +65,21 @@ Container component can contain other components and thus can be deeply nested t
 ### Elements
 Elements are components that cannot contain other components. In general elements represent data elements than can be assigned a literal value, such as ```1``` or ```hello```, or an object such as ```{color: 'GREEN', width: 16}```.
 
+#### Expressions
+Expressions are JavaScript expressions, enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
+
+Expressions have special functions depending on which components they are added to, however all expressions can be linked to regardless of their special functions.
+
+Expressions, when evaluated, that have a value that is a defined value or true is consider to be true. Expressions, when evaluated, that have a value that is undefined or false is considered to be false.
+
+In order to make constructs more managable and easier to understand in the Construct Designer, it is advised to keep each expression as short and compact as possible and rather to break up large expressions into multiple linked expressions.
+
+| Components | Expression Special Function                                 |
+|------------|-------------------------------------------------------------|
+| Serie      | n/a                                                         |
+| Leaf       | first leaf of a branch with true expression is branch value |
+| Loop       | stop loop iteration if expression is true                   |
+
 #### Controls
 Controls are GUI (Graphical User Interface) components used to present or collect information from the construct user in the viewer. Controls can only be added to pages and all controls on  a page is shown to the user in the construct viewer at the same time.
 
@@ -74,7 +89,9 @@ Controls are GUI (Graphical User Interface) components used to present or collec
 | Question   | ask the user an open question with a text answer      |
 | Choice     | ask the user a closed question from a list of options |
 
-A controls can be dynamically modified during a session by linking to a Expression that returns an object to override the parameters of the control:
+
+##### Dynamic Controls
+All controls can be dynamically modified during a session by linking to a Expression that returns an object to override the parameters of the control:
 
 | Controls               | Parameter
 |------------------------|--------------------
@@ -99,21 +116,6 @@ return {
   value: 'RED'
 };
 ```
-
-#### Expressions
-Expressions are JavaScript expressions, enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
-
-Expressions have special functions depending on which components they are added to, however all expressions can be linked to regardless of their special functions.
-
-Expressions, when evaluated, that have a value that is a defined value or true is consider to be true. Expressions, when evaluated, that have a value that is undefined or false is considered to be false.
-
-In order to make constructs more managable and easier to understand in the Construct Designer, it is advised to keep each expression as short and compact as possible and rather to break up large expressions into multiple linked expressions.
-
-| Components | Expression Special Function                                 |
-|------------|-------------------------------------------------------------|
-| Serie      | n/a                                                         |
-| Leaf       | first leaf of a branch with true expression is branch value |
-| Loop       | stop loop iteration if expression is true                   |
 
 ## Construct Viewer
 The construct viewer looks a lot like a software wizard, and was inspired by that design. It has 3 main areas, the page view of the left, the timeline on the right, and the navigation buttons at the bottom of the page.
