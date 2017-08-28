@@ -1,7 +1,7 @@
 # ExpertBox
-(ExpertBox.com)[https://ExpertBox.com] is a free to use knowledge automation platform used by experts from different knowledge domains to create constructs of systematic conversations that converse unattended with consumers, for free or for a small fee.
+[ExpertBox.com](https://ExpertBox.com) is a free to use knowledge automation platform used by experts from different knowledge domains to create constructs of systematic conversations that converse unattended with consumers, for free or for a small fee.
 
-Constructs are automated conversations and business process automation flows, created on (ExpertBox.com)[https://ExpertBox.com] using the construct designer. Users can have paid or free or subscribe to sessions with constructs and access these session via the Construct Viewer.
+Constructs are automated conversations and business process automation flows, created on [ExpertBox.com](https://ExpertBox.com) using the construct designer. Users can have paid or free or subscribe to sessions with constructs and access these session via the Construct Viewer.
 
 ## Construct Designer
 The construct designer includes an action button that, when touched or hovered over presents an icon menu (with tooltips) relevant to the current component that is selected in the model. The model is a serie component, the top level component of the construct, and the entry point to all other components in the construct.
@@ -66,7 +66,7 @@ Container component can contain other components and thus can be deeply nested t
 Elements are components that cannot contain other components. In general elements represent data elements than can be assigned a literal value, such as ```1``` or ```hello```, or an object such as ```{color: 'GREEN', width: 16}```.
 
 #### Expressions
-Expression components contain (JavaScript expressions)[https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Expressions_and_Operators], enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
+Expression components contain [JavaScript expressions](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Expressions_and_Operators), enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
 
 Expressions have special functions depending on which components they are added to, however all expressions can be linked to regardless of their special functions.
 
