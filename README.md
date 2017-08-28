@@ -172,4 +172,4 @@ In order to ensure that users always are using fresh knowledge, sessions expire 
 Once a session was started, the construct viewer will be shown for the construct in question. While a session has not expired, it can be found using the Sessions menu. Once expired, only reports of a session will be available, until archived or deleted by the user.
 
 ## Construct Viewer
-The construct viewer looks a lot like a software installation wizard, and was inspired by that design. It has 3 main areas, the current page of the session on the left, the timeline on the right, and the navigation at the bottom of the page.
+The construct viewer looks a lot like a software installation wizard, and was inspired by that design. It has 3 main areas, the current page of the session on the left for presentation of information and collection of information from the user, the timeline on the right to show what pages have been completed and which pages are expected next (this changes all the time due to new information provided by the user), and the navigation at the bottom of the page for the user to go forward and backward between pages.
