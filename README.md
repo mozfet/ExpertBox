@@ -63,18 +63,42 @@ Container component can contain other components and thus can be deeply nested t
 | Loop      | Serie, Page, Loop, Branch, Expression | Repeat   |
 
 ### Elements
-Elements are components that cannot contain other components. In general elements represent data elements than can be assigned a literal value, such as '''1''' or '''hello'''', or an object such as '''{color: 'GREEN', width: 16}'''.
+Elements are components that cannot contain other components. In general elements represent data elements than can be assigned a literal value, such as ```1``` or ```hello```, or an object such as ```{color: 'GREEN', width: 16}```.
 
 #### Controls
 Controls are GUI (Graphical User Interface) components used to present or collect information from the construct user in the viewer. Controls can only be added to pages and all controls on  a page is shown to the user in the construct viewer at the same time.
-
-In order
 
 | Control    | Purpose
 |------------|-------------------------------------------------------|
 | Text       | present text information to user                      |
 | Question   | ask the user an open question with a text answer      |
 | Choice     | ask the user a closed question from a list of options |
+
+A controls can be dynamically modified during a session by linking to a Expression that returns an object to override the parameters of the control:
+
+| Controls               | Parameter
+|------------------------|--------------------
+| Text, Question, Choice | value - the initial/default value of the control
+| Question, Choice       | prompt - tells the user what information this control requires
+| Choice                 | options - an array of option objects for the user to choose from
+
+Example Expression script for overriding a Choice control; the overridden control will show the user a prompt to 'Choose a colour' and offer a choice between 'Green' and 'Red', with 'Red' being preselected for the user when the page is initially shown:
+```
+return {
+  prompt: 'Choose a colour',
+  options: [
+    {
+      label: 'Green',
+      value: 'GREEN'
+    },
+    {
+      label: 'Red',
+      value: 'RED'
+    }
+  ],
+  value: 'RED'
+};
+```
 
 #### Expressions
 Expressions are JavaScript expressions, enabling simple data evaluation, calculation and assignment, but also complex logic, algorithms, formulas and access to other data sources on the internet.
