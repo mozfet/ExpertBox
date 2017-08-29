@@ -72,7 +72,7 @@ Expressions have special functions depending on which components they are added 
 
 Expressions, when evaluated, that have a value that is a defined value or true is consider to be true. Expressions, when evaluated, that have a value that is undefined or false is considered to be false.
 
-In order to make constructs more managable and easier to understand in the Construct Designer, it is advised to keep each expression as short and compact as possible and rather to break up large expressions into multiple linked expressions.
+In order to make constructs more manageable and easier to understand in the Construct Designer, it is advised to keep each expression as short and compact as possible and rather to break up large expressions into multiple linked expressions.
 
 | Components | Expression Special Function                                 |
 |------------|-------------------------------------------------------------|
