@@ -126,7 +126,7 @@ Controls are GUI (Graphical User Interface) components used to present or collec
 
 
 ##### Dynamic Controls
-All controls can be dynamically modified during a session by linking to a Expression that returns an object to override the parameters of the control:
+It is common for conversations to gather more information about data provided by the user; in order to accomplish this it mush be possible to create controls on the fly based on user data. All controls can be dynamically modified during a session by linking to a Expression that returns an object to override the parameters of the control that was specified for this control in the Construct Designer:
 
 | Controls               | Parameter
 |------------------------|--------------------
