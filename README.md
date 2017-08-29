@@ -70,7 +70,7 @@ Expression components contain [JavaScript expressions](https://developer.mozilla
 
 Expressions have special functions depending on which components they are added to, however all expressions can be linked to regardless of their special functions.
 
-Expressions, when evaluated, that have a value that is a defined value or true is consider to be true. Expressions, when evaluated, that have a value that is undefined or false is considered to be false.
+Expressions, when evaluated, that have a value that is a defined value or true is consider to be true. Expressions, when evaluated, that have a value that is undefined or empty or false is considered to be false.
 
 In order to make constructs more manageable and easier to understand in the Construct Designer, it is advised to keep each expression as short and compact as possible and rather to break up large expressions into multiple linked expressions.
 
