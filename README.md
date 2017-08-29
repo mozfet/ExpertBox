@@ -82,22 +82,12 @@ In order to make constructs more managable and easier to understand in the Const
 
 Expressions have direct access to the value of linked values as same named local variables in script, and have access to a set of utility libraries to simplify and speed up the writing of scrips.
 
-Example - always returns true:
+Simple Example - always returns true:
 ```
   return true;
 ```
 
-Example - always returns false:
-```
-  return false;
-```
-
-Example - return the value of a linked component named ```colour```
-```
-  return colour;
-```
-
-Example - return ture if a linked component named ```colour``` has the value ```GREEN```
+Typical Example - return ture if a linked component named ```colour``` has the value ```GREEN```
 ```
   return colour === 'GREEN';
 ```
