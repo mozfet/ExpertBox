@@ -1,5 +1,5 @@
 # ExpertBox
-[ExpertBox.com](https://ExpertBox.com) is a free to use knowledge automation platform used by experts from different knowledge domains to create constructs of systematic conversations that converse unattended with consumers, for free or for a small fee.
+[ExpertBox.com](https://ExpertBox.com) is used by experts from different knowledge domains to create constructs of systematic conversations that converse unattended with consumers, for free or for a small fee. In other words everyone can build their own chatbot for free, and then charge people to talk to it.
 
 Constructs are automated conversations and business process automation flows, created on [ExpertBox.com](https://ExpertBox.com) using the construct designer. Users can have paid or free or subscribe to sessions with constructs and access these session via the Construct Viewer.
 
