@@ -4,7 +4,7 @@
 Constructs are automated conversations and business process automation flows, created on [ExpertBox.com](https://ExpertBox.com) using the construct designer. Users can have paid or free or subscribe to sessions with constructs and access these session via the Construct Viewer.
 
 ## Video Examples
-[Construct Example 1 - Pages and Controls](https://www.youtube.com/watch?v=gpgPMNH0UrM)
+[Construct Example 1 - Pages and Controls](https://youtu.be/avgnqf6HHfo)
 
 ## Construct Designer
 The construct designer includes an action button that, when touched or hovered over presents an icon menu (with tooltips) relevant to the current component that is selected in the model. The model is a serie component, the top level component of the construct, and the entry point to all other components in the construct.
