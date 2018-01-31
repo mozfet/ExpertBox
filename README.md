@@ -198,7 +198,7 @@ The schema field in the construct designer Insert and Update CRUD dialogs must b
 ```
 When a control is not shown, it is still asked in the CRUD-Create and CRUD-Update forms, it just is not listed in the on page summary. If an Icon is not specified, the prompt will be used instead of the icon. When an icon is specified, the prompt will be used as tooltip for the icon.
 
-For a full list of supported icons, see (MaterializeCSS Icons)[http://materializecss.com/icons.html].
+For a full list of supported icons, see [MaterializeCSS Icons](http://materializecss.com/icons.html).
 
 ##### Dynamic Controls
 It is common for conversations to gather more information about data provided by the user; in order to accomplish this it mush be possible to create controls on the fly based on user data. All controls can be dynamically modified during a session by linking to a Expression that returns an object to override the parameters of the control that was specified for this control in the Construct Designer:
