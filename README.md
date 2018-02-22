@@ -131,7 +131,7 @@ Advanced example - use the underscore library to group a linked list of colours 
       return 'SECONDARY';
     }
   };
-  return api._.groupBy(colourList, function(colour){ return  colourType(colour)});
+  return api._.groupBy(colourList, function(colour){return colourType(colour)});
 ```
 
 ##### Persistance API
@@ -147,19 +147,40 @@ tbd
 tbd
 
 #### Controls
-Controls are GUI (Graphical User Interface) components used to present or collect information from the construct user in the viewer. Controls can only be added to pages and all controls on  a page is shown to the user in the construct viewer at the same time.
+Controls are GUI (Graphical User Interface) components used to present or
+collect information from the construct user in the viewer. Controls can only be
+added to pages and all controls on  a page is shown to the user in the construct viewer at the same time.
 
-| Control    | Purpose
+| Control    | Purpose                                                       |
 |------------|---------------------------------------------------------------|
-| Text       | present text information to user                              |
-| Question   | ask the user an open question with a text answer              |
-| Choice     | ask the user a closed question from a list of options         |
-| Dices      | present random values using 3d animated gambling dice         |
-| CRUD       | a user database collection with Create, Read, Update, Destroy |
+| Text       | Present text information to user.                             |
+| Question   | Ask the user an open question with a text answer.             |
+| Choice     | Ask the user a closed question from a list of options.        |
+| Dices      | Present random values using 3d animated gambling dice.        |
+| CRUD       | Database collection with Create, Read, Update, Destroy.       |
+
+| Control    | When linked to anchor value                              |
+|------------|---------------------------------------------------------------|
+| Text       | Show the value of the anchor as text, overriding the default. |
+| Question   | Use anchor value object to override label and value.          |
+| Choice     | Use anchor value object to override label, value, options.    |
+| Dices      | Use anchor value object to override label and value.          |
+| CRUD       | Cannot be linked to an anchored component.                    |
+
+##### Text
+It can receive its value from another component by linking to an anchored
+component.
+
+##### Question
+It can receive its value from another component by linking to an anchored
+component.
+Special characters include: ```_@$#±/\ |.,!?<>{}()[]'"`^#&+-*%="~```
 
 ##### CRUD Schema
 
-The schema field in the construct designer Insert and Update CRUD dialogs must be formatted as JSON; the objects are control component specifications, for example:
+The schema field in the construct designer Insert and Update CRUD dialogs must
+be formatted as JSON; the objects are control component specifications, for
+example:
 ```
 [
   {
