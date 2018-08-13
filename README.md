@@ -134,7 +134,7 @@ Advanced example - use the underscore library to group a linked list of colours 
   return api._.groupBy(colourList, function(colour){return colourType(colour)});
 ```
 
-##### Persistance API
+##### Persistence API
 
 tbd
 
@@ -142,9 +142,140 @@ tbd
 
 tbd
 
-##### String API
+##### Text API
 
-tbd
+###### Case
+This part of the API is an facade (wrapping) for the wonderful set of text case conversion tools of [to-case](https://github.com/ianstormtaylor/to-case).
+
+Case Conversion Example:
+```
+api.text.case.to.camel('what_the_heck')      // "whatTheHeck"
+api.text.case.to.capital('what the heck')    // "What The Heck"
+api.text.case.to.constant('whatTheHeck')     // "WHAT_THE_HECK"
+api.text.case.to.dot('whatTheHeck')          // "what.the.heck"
+api.text.case.to.inverse('whaT tHe HeCK')    // "WHAt ThE HeCK"
+api.text.case.to.lower('whatTheHeck')        // "what the heck"
+api.text.case.to.pascal('what.the.heck')     // "WhatTheHeck"
+api.text.case.to.sentence('WHAT THE HECK.')  // "What the heck."
+api.text.case.to.slug('whatTheHeck')         // "what-the-heck"
+api.text.case.to.snake('whatTheHeck')        // "what_the_heck"
+api.text.case.to.space('what.the.heck')      // "what the heck"
+api.text.case.to.title('what the heck')      // "What the Heck"
+api.text.case.to.upper('whatTheHeck')        // "WHAT THE HECK"
+```
+
+Case detection:
+```
+api.text.case.to('thisIsAString')      // "camel"
+api.text.case.to('This Is A String')   // "capital"
+api.text.case.to('THIS_IS_A_STRING')   // "constant"
+api.text.case.to('this.is.a.string')   // "dot"
+api.text.case.to('this is a string.')  // "lower"
+api.text.case.to('ThisIsAString')      // "pascal"
+api.text.case.to('This is a string.')  // "sentence"
+api.text.case.to('this-is-a-string')   // "slug"
+api.text.case.to('this_is_a_string')   // "snake"
+api.text.case.to('this is a string')   // "space"
+api.text.case.to('This Is a String')   // "title"
+api.text.case.to('THIS IS A STRING')   // "upper"
+```
+
+###### Padding
+
+Pads text to the left or right of other text up to a limit.
+
+Right Pad Example:
+```
+api.text.pad.right("input", 5, "padblock")
+```
+
+Result: ```inputpadbl```
+
+Left Pad Example:
+```
+api.text.pad.left("input", 7, " _")
+```
+
+Result: ``` _ _ _ input```
+
+###### Convert To
+Utility functions that convert text to literals, objects and arrays.
+
+####### Number
+Convert text to a number for use in calculations.
+
+Example
+```
+api.text.to.number("5");
+```
+
+Result: ```5```
+
+####### Paragraphs
+Convert text to an array of texts where each index in the array contains a paragraph, in order, without leading or trailing whitespace, from the input text.
+
+Example:
+```
+api.text.to.paragraphs("  This is paragraph 1.  \n  This is paragraph2.");
+```
+
+Result: ```["This is paragraph 1.", "This is paragraph 2."]```
+
+###### Convert From
+api.text.from
+```
+```
+
+###### Currency
+api.text.currency
+```
+```
+
+##### Underscore JS
+[UnderscoreJS](https://underscorejs.org) is an JavaScript utility library that simplifies working with collections of data and objects; the Swiss army knife of JavaScript.
+
+Example where stoogeNames equals ```["moe", "larry", "curly"]```
+```
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+var stoogeNames = api._.pluck(stooges, 'name');
+```
+
+
+
+##### Algorithmia.com
+Algorithmia.com provides a wide range of Artificial Intelligence algorithms via our easy to use API.
+
+You can use your own Algorithmia.com account. All content in expression scripts are safely stored encrypted in our secure private cloud database server and never leave our servers except to the owner of the construct, so your key is safe.
+```javascript
+const result = api.algorithmia.algorithm(key, algorithm, input);
+```
+
+Or use a selection of built algorithms without needing an Algorithmia.com account.
+```javascript
+const arrayOfStrings = api.alorithmia.htmlToStringList(urlString);
+const twoLetterLanguageCode = api.alorithmia.languageIdentification(text);
+const yandexTranslation = api.alorithmia.yandexTranslate(inputLanguage, outputLanguage, text);
+const googleTranslationEnglish = api.alorithmia.googleTranslate(text);
+const summary = api.algorithmia.summarize(text);
+const tagArray = api.algorithmia.autoTag(text);
+const entityArray = namedEntityRecognition(text);
+const
+```
+
+##### Textgears
+[Textgears](textgears.com) provide and English grammar correcting service, it is intended to be used as human guided tool for use in text editors.
+
+We wrapped the [Textgears NPM Library](https://www.npmjs.com/package/textgears) to instantly apply the best changes to a piece of text. Our wrap will synchronously fix English text according to the best guess of the Artificial Intelligence, whether that is desired is up to you...
+
+```javascript
+const fixedText = api.textgears.fix('I is an engeneer.. I wihh i was here');
+```
+
+Results in: ```I am an engineer.. I with I was here.```
+
+Note that the best guess is not always the right guess. In this case ```I wihh i was here``` was fixed to ```I with I was here.```, where the intension was ```I wish I was there.```. Ideal usage is to automatically clean-up rough text with bad formatting.
+
+Interesting observation: Missing fullstops are fixed if other fullstops are present in the text, but double fullstops are not fixed...
 
 #### Controls
 Controls are GUI (Graphical User Interface) components used to present or
