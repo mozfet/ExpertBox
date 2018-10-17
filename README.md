@@ -134,6 +134,28 @@ Advanced example - use the underscore library to group a linked list of colours 
   return api._.groupBy(colourList, function(colour){return colourType(colour)});
 ```
 
+Execution options:
+An Expression component can be processed to determine the next page, but also in
+other contexts, such as predicting the contents of the timeline.
+
+```
+data.options.isFuture
+```
+Used to prevent processing while predicting the content of the timeline. E.g.
+from the AI Example, to avoid racking up high charges on Algorithmia, while
+still enabling future prediction to continue.
+```
+if (data.options.isFuture) {
+  return ['fake'];
+}
+else {
+  var result = api.algorithmia.htmlToStringList(targetUrl);
+  return api._.filter(result,  function (str) {
+    return !api._.isEmpty(str);
+  })
+}
+```
+
 ##### Persistence API
 
 tbd
