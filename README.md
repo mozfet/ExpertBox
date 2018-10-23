@@ -262,8 +262,6 @@ var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly',
 var stoogeNames = api._.pluck(stooges, 'name');
 ```
 
-
-
 ##### Algorithmia.com
 Algorithmia.com provides a wide range of Artificial Intelligence algorithms via our easy to use API.
 
@@ -323,6 +321,14 @@ added to pages and all controls on  a page is shown to the user in the construct
 ##### Text
 It can receive its value from another component by linking to an anchored
 component.
+
+###### Markdown
+Text can contain markdown and HTML. Some handy snippets:
+
+Responsive Popout Boxed Image located at External URL
+```
+<img class="materialboxed responsive-img" src="https://dft1tcs2nbf7z.cloudfront.net/images/tutorials/quickstart/main_menu.gif">
+```
 
 ##### Question
 It can receive its value from another component by linking to an anchored
